@@ -1,56 +1,315 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia de Requerimento - IFCE campus Cedro-CE</title>
+    <title>Guia de Requerimento - IFCE Campus Cedro</title>
 </head>
+
 <body>
+
     <header>
-        <h1>INSTITUTO FEDERAL</h1>
-        <h2>Ceará - Campus Cedro</h2>
-        <h3>GUIA DE REQUERIMENTO </h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Instituto_Federal_do_Cear%C3%A1_-_Campus_Cedro_-_Marca_Horizontal_2015.svg"
+            alt="Logotipo do Instituto Federal do Ceará - Campus Cedro" width="400">
+        <h1>GUIA DE REQUERIMENTO</h1>
     </header>
 
-    <form action="#" method="post">
-        <p> 
-        <label for="protocolo">Protocolo n.°</label>
-        <input type="text" id="protocolo" name="protocolo">
-        </p>
+    <main>
+        <form action="#" method="post">
 
-        <fieldset>
-            <legend>Dados do Requerente</legend>
-            <p> 
-                <label for="requerente">REQUERENTE</label>
-                <input type="text" id="requerente" name="requerente">
-            </p>
-            <p> 
-                <label for="matricula">N° DE MATRÍCULA</label>
-                <input type="text" id="matricula" name="matricula">
-            </p>
             <p>
-                <label for="data de nascimento">DATA DE NASCIMENTO</label>
-                <input type="text" id="data de nascimento" name="data de nascimento">
-                <label for="naturalidade">NATURALIDADE</label>
-                <input type="text" id="naturalidade" name="naturalidade">
+                <label for="protocolo">Protocolo n.°:</label>
+                <input type="text" id="protocolo" name="protocolo">
             </p>
-            <p>
-                <label for="filiacao">FILIAÇÃO</label>
-                <input type="text" id="filiacao" name="filiacao">  
-            </p>
-            <p>
-                <label for="curso">CURSO</label>
-                <input type="text" id="curso" name="curso">  
-                <label for="periodo">PERÍODO</label>
-                <input type="text" id="periodo" name="periodo">  
-                <label for="turno">TURNO</label>
-                <input type="text" id="turno" name="turno">  
-            </p>
-        </fieldset>
 
-        
-    
+            <fieldset>
+                <legend>Dados do Requerente</legend>
 
-    </form>
+                <p>
+                    <label for="requerente">REQUERENTE:</label>
+                    <input type="text" id="requerente" name="requerente" size="50" required>
+                </p>
+
+                <p>
+                    <label for="matricula">N° DE MATRÍCULA:</label>
+                    <input type="text" id="matricula" name="matricula" required>
+                </p>
+
+                <p>
+                    <label for="nascimento">DATA DE NASCIMENTO:</label>
+                    <input type="date" id="nascimento" name="nascimento">
+
+                    <label for="naturalidade">NATURALIDADE:</label>
+                    <input type="text" id="naturalidade" name="naturalidade">
+                </p>
+
+                <p>
+                    <label for="filiacao">FILIAÇÃO:</label>
+                    <input type="text" id="filiacao" name="filiacao" size="50">
+                </p>
+
+                <p>
+                    <label for="curso">CURSO:</label>
+                    <input type="text" id="curso" name="curso" size="35">
+
+                    <label for="periodo">PERÍODO:</label>
+                    <input type="text" id="periodo" name="periodo" size="5">
+
+                    <label for="turno">TURNO:</label>
+                    <select id="turno" name="turno">
+                        <option value="">Selecione</option>
+                        <option value="manha">Manhã</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="noite">Noite</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="telefone">TELEFONE:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+
+                    <label for="email">E-MAIL:</label>
+                    <input type="email" id="email" name="email" size="30">
+                </p>
+            </fieldset>
+
+            <h2>ASSINALE:</h2>
+
+            <table border="1" cellpadding="5">
+                <thead>
+                    <tr>
+                        <th scope="col">Nº</th>
+                        <th scope="col">Solicitação</th>
+                        <th scope="col">Setor responsável</th>
+                        <th scope="col">Marcar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>2° Via (especificar)</td>
+                        <td>CCA</td>
+                        <td><input type="checkbox" name="opcao" value="01" aria-label="2° Via"></td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>Aproveitamento de Disciplina (anexar Histórico Escolar e Programa da Disciplina)</td>
+                        <td>Coordenação do Curso</td>
+                        <td><input type="checkbox" name="opcao" value="02" aria-label="Aproveitamento de Disciplina">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>Matrícula fora do prazo (justificar)</td>
+                        <td>CCA</td>
+                        <td><input type="checkbox" name="opcao" value="03" aria-label="Matrícula fora do prazo"></td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td>Cancelamento da Matrícula</td>
+                        <td>CCA</td>
+                        <td><input type="checkbox" name="opcao" value="04" aria-label="Cancelamento da Matrícula"></td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td>Colação de Grau / Colação Especial (justificar)</td>
+                        <td>CCA</td>
+                        <td><input type="checkbox" name="opcao" value="05" aria-label="Colação de Grau"></td>
+                    </tr>
+                    <tr>
+                        <td>06</td>
+                        <td>Declaração (especificar)</td>
+                        <td>CCA</td>
+                        <td><input type="checkbox" name="opcao" value="06" aria-label="Declaração"></td>
+                    </tr>
+                    <tr>
+                        <td>07</td>
+                        <td>Diploma (especificar)</td>
+                        <td>CCA</td>
+                        <td><input type="checkbox" name="opcao" value="07" aria-label="Diploma"></td>
+                    </tr>
+                    <tr>
+                        <td>08</td>
+                        <td>Histórico Escolar</td>
+                        <td>CCA</td>
+                        <td><input type="checkbox" name="opcao" value="08" aria-label="Histórico Escolar"></td>
+                    </tr>
+                    <tr>
+                        <td>09</td>
+                        <td>Reabertura de Matrícula</td>
+                        <td>CCA</td>
+                        <td><input type="checkbox" name="opcao" value="09" aria-label="Reabertura de Matrícula"></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Segunda Chamada (anexar justificativa e especificar)</td>
+                        <td>Coordenação do Curso</td>
+                        <td><input type="checkbox" name="opcao" value="10" aria-label="Segunda Chamada"></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Reingresso</td>
+                        <td>CCA</td>
+                        <td><input type="checkbox" name="opcao" value="11" aria-label="Reingresso"></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Trancamento de Disciplina (especificar)</td>
+                        <td>Coordenação dos Cursos</td>
+                        <td><input type="checkbox" name="opcao" value="12" aria-label="Trancamento de Disciplina"></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Trancamento de Matrícula (anexar documentação comprobatória)</td>
+                        <td>Coordenação Pedagógica</td>
+                        <td><input type="checkbox" name="opcao" value="13" aria-label="Trancamento de Matrícula"></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Transferência para outra instituição</td>
+                        <td>CCA</td>
+                        <td><input type="checkbox" name="opcao" value="14" aria-label="Transferência"></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Validação de Conhecimento (especificar)</td>
+                        <td>Coordenação dos Cursos</td>
+                        <td><input type="checkbox" name="opcao" value="15" aria-label="Validação de Conhecimento">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Reajuste</td>
+                        <td>CCA</td>
+                        <td><input type="checkbox" name="opcao" value="16" aria-label="Reajuste"></td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>Recorreção de Prova</td>
+                        <td>Coordenação do Curso</td>
+                        <td><input type="checkbox" name="opcao" value="17" aria-label="Recorreção de Prova"></td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>AUXÍLIO - Transporte</td>
+                        <td>Serviço Social</td>
+                        <td><input type="checkbox" name="opcao" value="18" aria-label="Auxílio Transporte"></td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>AUXÍLIO - Moradia</td>
+                        <td>Serviço Social</td>
+                        <td><input type="checkbox" name="opcao" value="19" aria-label="Auxílio Moradia"></td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>AUXÍLIO - Óculos</td>
+                        <td>Serviço Social</td>
+                        <td><input type="checkbox" name="opcao" value="20" aria-label="Auxílio Óculos"></td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>AUXÍLIO - Pais e Mães</td>
+                        <td>Serviço Social</td>
+                        <td><input type="checkbox" name="opcao" value="21" aria-label="Auxílio Pais e Mães"></td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>Outros (especificar)</td>
+                        <td>-</td>
+                        <td><input type="checkbox" name="opcao" value="22" aria-label="Outros"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>
+                <label for="especificar"><b>ESPECIFICAR:</b></label><br>
+                <textarea id="especificar" name="especificar" rows="3" cols="70"></textarea>
+            </p>
+
+            <p>
+                <label for="justificar"><b>JUSTIFICAR:</b></label><br>
+                <textarea id="justificar" name="justificar" rows="3" cols="70"></textarea>
+            </p>
+
+            <p>
+                <b>DECLARO CONHECER O REGIMENTO DESTA IFE, BEM COMO O PRAZO NECESSÁRIO À TRAMITAÇÃO DO PROCESSO</b>
+            </p>
+
+            <table border="1" cellpadding="15">
+                <tr>
+                    <td>
+                        <br><br>
+                        ______________________________<br>
+                        REQUERENTE (ASS. LEGÍVEL)
+                    </td>
+                    <td>
+                        <br><br>
+                        ______________________________<br>
+                        FUNCIONÁRIO (ASS. LEGÍVEL)
+                    </td>
+                </tr>
+            </table>
+
+            <p>
+                CEDRO - CE,
+                <input type="text" name="dia" size="2" maxlength="2" aria-label="Dia"> DE
+                <input type="text" name="mes" size="12" aria-label="Mês"> DE 20<input type="text" name="ano" size="2"
+                    maxlength="2" aria-label="Ano">
+            </p>
+
+            <hr>
+
+            <table border="1" cellpadding="10">
+                <tr>
+                    <th scope="col">VISTO (COORDENAÇÃO DE ASSUNTOS ESTUDANTIS)</th>
+                    <th scope="col">VISTO (BIBLIOTECA)</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            <input type="radio" id="armario-nao" name="armario" value="nao">
+                            <label for="armario-nao">O requerente NÃO deve chave de armário</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="armario-sim" name="armario" value="sim">
+                            <label for="armario-sim">O requerente deve chave do armário:</label>
+                            <input type="text" name="armario_detalhe" aria-label="Detalhes da chave do armário">
+                        </p>
+                        <p>
+                            <br>
+                            ______________________________<br>
+                            Responsável (ass. legível)
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            <input type="radio" id="livros-nao" name="livros" value="nao">
+                            <label for="livros-nao">O requerente NÃO deve livros na biblioteca</label>
+                        </p>
+                        <p>
+                            <input type="radio" id="livros-sim" name="livros" value="sim">
+                            <label for="livros-sim">O requerente deve livros na biblioteca:</label>
+                            <input type="text" name="livros_detalhe" aria-label="Detalhes dos livros devidos">
+                        </p>
+                        <p>
+                            <br>
+                            ______________________________<br>
+                            Responsável (ass. legível)
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+            <p>
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+            </p>
+
+        </form>
+    </main>
+
 </body>
+
 </html>
